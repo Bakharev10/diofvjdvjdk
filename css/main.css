@@ -1118,4 +1118,102 @@ ul li img {
 body {
     max-width: 100%;
     overflow-x: hidden;
-}   
+}
+
+/* Для телефонов */
+@media (max-width: 768px) {
+    /* Меню делаем вертикальным */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+    
+    nav li {
+        margin: 10px 0;
+    }
+    
+    /* Заголовки меньше */
+    h1 {
+        font-size: 24px !important;
+    }
+    
+    /* Картинки по ширине экрана */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Сетка игр в один столбец */
+    .games {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Контейнеры не в ширину */
+    .container {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    /* Лого и навигация */
+    .logo {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    /* Hero секция */
+    .hero {
+        flex-direction: column;
+    }
+    
+    .hero--info {
+        text-align: center;
+    }
+    
+    /* Сетка фич */
+    .info {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Картинки проектов */
+    .images {
+        flex-direction: column;
+    }
+    
+    .images img {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    /* Email блок */
+    .email .block {
+        flex-direction: column;
+    }
+    
+    /* Футер */
+    footer .blocks {
+        flex-direction: column;
+    }
+}
+
+/* Для маленьких телефонов */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px !important;
+    }
+    
+    h2 {
+        font-size: 16px !important;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 10px;
+    }
+}
