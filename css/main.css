@@ -1,0 +1,1121 @@
+/*отвечает за шрифты берем с гугл фонт*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+/*отвечает за то что убирает лишние отступы внутрении и внешние*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*отвечает за шрифт и цвет текста*/
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    color: #fff;
+    font-size: 16px;
+}
+
+.a {
+    text-decoration: none;
+}
+/*отвечает за то что картинка будет на 100 процентов*/
+img {
+    max-width: 100%;
+}
+/*отвечает за цвет фона всего сайта*/
+.wrapper {
+    background: linear-gradient(180deg, rgb(0, 0, 0), rgb(74, 40, 0) 100%);
+    width: 100%;
+    overflow-x: visible;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto
+}
+/*отвечает за отсуп от шапки*/
+header {
+    padding: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/*для размера шрифта и жирности в частности для логотипа*/
+header .logo,
+footer .blocks .logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+header nav {
+    float: right;
+    width: 40%;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+}
+/*надо для черточки возле Home*/
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #DC7000;
+    border-radius: 10px;
+    position: relative;
+    top: 5px;
+    left: -10px
+}
+
+/*отвечает за черточку*/
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 5px solid #DC7000;
+    border-radius: 2.5px;
+}
+/*отвечает за кнопку Contact*/
+header nav ul li.btn a, .email .block button {
+    background: #FA9021;
+    padding: 9px 17px;
+    border-radius: 10px;
+    transition: all 500ms ease;
+    border: 0px;
+    display: inline-block; 
+}
+
+header nav ul li.btn a:hover, .email .block button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero--info {
+    width: 530px;
+    padding-top: 70px;
+}
+
+.hero--info h2 {
+    color: #E87D0E;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero--info h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hero--info p {
+    font-weight: 500;
+    line-height: 170%;
+    margin: 23px 0px;
+}
+
+.hero--info .btn {
+    background: linear-gradient(135deg, rgb(250, 131, 5), rgb(251, 158, 60) 100%);
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: #fff;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 19px;
+}
+
+.hero--info .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero img {
+    position: absolute;
+    top: -150px;
+    right: 0px;
+}
+
+/*cекция с играми*/
+.trending {
+    padding-top: 50px;
+}
+.tending h3 {
+    font-weight: 600;
+    font-size: 31px;
+}
+
+/*кнопка SEE ALL*/
+.trending .see-all {
+    color: #fff;
+    background: #25211D;
+    border-radius: 10px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}
+
+.trending .see-all:hover {
+    transform: scale(1.1);
+}
+
+.trending .games {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.trending .games span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trending .games span img {
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+}
+
+.container-big-text {
+    color: #fff;
+    font-weight: 600;
+    font-size: 35px;
+    padding: 50px 0;
+    text-align: center;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*banner*/
+.banner {
+    padding: 40px 0px;
+}
+
+.banner h3 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.banner p {
+    line-height: 170%;
+    margin-bottom: 30px;
+    width: 540px;
+}
+
+/*кружки на каких девайсах есть*/
+.tips h3 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.tips p {
+    line-height: 170%;
+    margin-bottom: 25px;
+    width: 800px;
+    text-align: center;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tips {
+    background-image: url(css/test.png;)
+}
+/*секция с изображением*/
+.features {
+    background: url('/img/test.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 0px;
+}
+
+.features h3,
+.features p {
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features h3 {
+    font-size: 30px;
+}
+
+.features .info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features .info .block {
+    text-align: center;
+    width: 20%;
+    margin: 30px 2%;
+}
+
+.features .info .block:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 500ms ease;
+}
+
+.features .info .block .img {
+    margin-bottom: 15px;
+}
+
+/*projects раздел*/
+.projects {
+    padding: 70px 0;
+}
+
+.projects h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.projects p {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.projects .images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px; /* Отступ сверху для первого ряда фото */
+    margin-bottom: 5px;
+    gap: -110px;
+}
+
+/*кнопка SEE ALL*/
+ .projects .see-all {
+    color: #fff;
+    background: #25211D;
+    border-radius: 10px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}
+
+.projects .see-all {
+    float: none;
+    width: 60px;
+    text-align: center;
+    margin: 40px auto 0 auto;
+}
+
+.projects .see-all:hover {
+    transform: scale(1.1);
+}
+/*гмаил нижняя часть*/
+.email {
+    padding-bottom: 120px;
+}
+
+.email h3 {
+    margin-top: 60px;
+    font-size: 30px;
+}
+
+.email .block {
+    background: #1C140F;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 40px 3%;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email .block h4 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.email .block p {
+    width: 500px;
+}
+
+.email .block input {
+    background: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 15px;
+    width: 380px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    padding: 20px 30px;
+    position: relative;
+    right: -100px;
+    z-index: 1;
+    padding-right: 120px;
+}
+
+.email .block input:hover {
+    transition: all 500ms ease;
+    scale: calc(1.02);
+}
+
+.email .block input::placeholder {
+    color: #898989;
+}
+
+.email .block button {
+    cursor: pointer;
+    border: 0;
+    padding: 13px 17px;
+    position: relative;
+    z-index: 2;
+}
+
+header nav ul li:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 500ms ease;
+}
+
+body {
+    animation: fadeIn 1s ease;
+}
+
+.games .block {
+    transition: transform 0.3s ease; /* Плавность */
+}
+
+.games .block:hover {
+    transform: scale(1.05); /* Увеличение на 5% */
+}
+/* анимация появления сайта*/
+.black-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+    animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+
+/*footer для самого нижнего блока */
+footer {
+    background: #000;
+    padding: 50px 0;
+}
+
+footer .blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .blocks p {
+    width: 300px;
+    margin: 15px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer .blocks h4 {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+footer .blocks ul li {
+    margin-top: 7px;
+}
+
+footer hr {
+    margin: 30px 0px;
+    border: 0;
+    height: 0.6px;
+    background: #ccc;
+}
+
+footer>p {
+    text-align: center;
+}
+
+.hero-about .info {
+    width: 500px;
+    padding: 200px;
+    margin-right: 200px;
+    margin-left: -100px;
+    margin-bottom: 50px;
+    font-size: 19px;
+}
+
+.hero-about .info h1 {
+    margin-top: -20px;
+    font-size: 35px;
+}
+
+.hero-about .info .btn {
+     background: linear-gradient(135deg, rgb(250, 131, 5), rgb(251, 158, 60) 100%);
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: #fff;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.hero-about .info .btn a {
+    text-decoration: none !important;  /* убираем подчеркивание */
+    color: #ffffff !important;         /* делаем белым */
+    border-bottom: none !important;
+    outline: none
+}
+
+.hero-about .info .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero-about .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero-about img {
+    position: absolute;
+    right: -150px;
+    top: 0px;
+}
+
+.hero-about {
+    position: relative;
+}
+
+/*jъотзывы */
+.work h2 {
+    margin-top: 40px;
+    font-size: 35px;
+}
+
+.work {
+    padding: 80px 0;
+}
+
+.work .blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work .blocks .block {
+    background: #1C140F;
+    width: 25%;
+    border-radius: 15px;
+    padding: 50px 35px;
+}
+
+.work .blocks .block .badge {
+    border-radius: 7px;
+    padding: 10px 20px;
+}
+
+.work .blocks .block h3 {
+    font-size: 20;
+    margin: 20px 0px;
+}
+
+.work .blocks .block .purple {
+    background: #B000DC;
+}
+
+.work .blocks .block .brown {
+    background: #dc420033
+}
+
+.work .blocks .block .green {
+    background: #00dc8b1d;
+}
+
+.imgabout {
+    position: absolute;
+    left: 240px;
+    margin: 150px 0px 0px 0px;
+}
+
+.Stars {
+    color: #FA9021;
+}
+
+.Star {
+    margin-top: -8px;
+    transform: translateY(-8px); 
+}
+
+.work .blocks .block:hover {
+    transition: all 600ms ease;
+    scale: calc(1.07);
+}
+
+.avatar {
+    display: flex;     /* Включаем "умное" расположение */
+    gap: 30px;         /* Расстояние между фото и текстом */
+    align-items: start; /* Прижимаем всё к верху */
+}
+
+.img {
+    width: 500px;
+    margin-left: 50px; 
+    margin-top: 90px;    /* Фиксируем размер фото */
+}
+
+.text h3 {
+    font-size: 29px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    width: 400px;
+    margin-top: 20px;
+}
+
+.text h5 {
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    margin-top: 90px;
+    margin-bottom: 35px;
+    margin-left: 50px;
+}
+
+.avatar {
+    background: #1C140F;
+}
+
+.text p {
+    margin-bottom: -10px;
+    line-height: 200%;
+    font-size: 16px;
+    width: 650px;
+    margin-left: 50px;
+}
+
+.texts {
+    margin: 70px 130px 0px;
+    font-size: 25px;
+}
+
+.team {
+    background: #1C140F;
+    border-radius: 20px;
+    width: 280px;
+    margin-bottom: 100px;
+    height: 200px;
+    text-align: center;
+    padding-top: 20px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 50px;
+    margin-right: 35px;
+    position: relative;
+    right: -100px;
+    left: 130px;
+}
+
+.team:hover {
+    transition: all 600ms ease;
+    scale: calc(1.07);
+}
+/*раздел с портолио*/
+ul li img {
+    width: 70px;
+    vertical-align: middle;
+}
+
+.stats-row {
+    display: flex;              /* всё в ряд */
+    justify-content: space-around; /* или center, или space-between */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;                  /* отступы между карточками */
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;     /* внутри карточки всё в колонку */
+    align-items: center;        /* центрируем по горизонтали */
+    text-align: center;
+}
+
+.stat-top {
+    display: flex;
+    align-items: center;        /* иконка и цифра в ряд */
+    gap: 20px;                   /* отступ между иконкой и цифрой */
+}
+
+.stat-card img {
+    width: 40px;
+    height: 40px;
+
+}
+
+.number {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 40px;
+    font-size: 28px;
+}
+
+.label {
+    display: inline-block;
+    margin-top: 10px;   /* или 15px, или 20px — сколько хочешь отступ сверху */
+    font-size: 19px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-left: 100px;
+    /* удали всё лишнее: padding-left, position, right */
+}
+
+.stat-card .stat-top img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: -65px;
+}
+
+.stats-row {
+    background: #1C140F;
+    border-radius: 10px;
+    margin: 50px 50px 50px 50px;
+    padding: 40px 20px;
+}
+
+.portfolio h3 {
+    font-weight: 800px;
+    font-size: 33px;
+    padding: 10px 30px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.portfolio p {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 10px;
+}
+
+#clients-label {
+    position: relative;
+    left: -10px;
+}
+
+.most {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: -40px;
+}
+
+
+.video {
+    display: flex;     /* Включаем "умное" расположение */
+    gap: 30px;        
+    align-items: start; 
+}
+
+.cheks {
+    width: 600px;
+    margin-left: 50px; 
+    margin-top: 250px;
+    padding: -50px 0px; 
+    height: 420px;
+}
+
+.video h3 {
+    font-size: 29px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    width: 400px;
+    margin-top: 30px;
+}
+
+.cheks {
+    width: auto;
+    margin-bottom: 300px;
+    margin-top: 110px;
+}
+
+.textl h3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    font-size: 30px;
+    padding: 10px 10px;
+}
+
+.textl p {
+    font-size: 14px;
+    width: 400px;
+    position: relative;
+    left: 55px;
+    margin-top: -50px;
+
+}
+
+.mod {
+    position: relative;
+    margin-top: 80px;
+}
+
+.mods {
+    position: relative;
+    margin-top:     80px;
+}
+
+.modl {
+    position: relative;
+    margin-top: 80px;
+}
+
+.chek2 {
+    position: relative;
+    top: 8px;
+}
+
+.more {
+    display: flex;
+}
+
+.loks {
+    flex-direction: column;
+}
+
+.loks h3 {
+    margin-bottom: 20px;
+    margin-left: 80px;
+    font-size: 30px;
+    padding: 10px 10px;
+    width: 500px;
+    text-decoration: none;
+}
+
+.loks .loki {
+    font-size: 17px;
+    width: 550x;
+    margin-bottom: 50px;
+    margin-left: 87px;
+}
+
+.moreimg {
+    margin-left: 400px;
+    margin-bottom: 150px;
+}
+
+.loks p {
+    margin-left: 85px;
+    font-size: 17px;
+    width: 550px;
+}
+
+.more .loks .btn {
+    background: #DC7000;
+    padding: 14px 25px;
+    margin-left: 80px;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 40px;
+    outline: none !important;
+    border: none !important;
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+
+.more .loks .btn a {
+    color: #fff;
+    text-decoration: none; 
+}
+
+.more .loks .btn:hover {
+    background: #b85e00;  
+    cursor: pointer; 
+}
+
+.read {
+    display: flex;
+    gap: 100px;
+}
+
+.readtext {
+    margin-left: 275px;
+}
+
+.readtext h3 {
+    font-size: 30px;
+    width: 500px;
+    padding: 10px 10px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
+.readtext p {
+    margin-left: 85px;
+    font-size: 17px;
+    width: 550px;
+    margin-bottom: 50px;
+}
+
+.readtext .jango {
+    font-size: 17px;
+    width: 550x;
+    margin-bottom: 50px;
+    margin-left: 87px;
+}
+
+.readimg {
+    margin-left: 80px;
+    margin-bottom: 100px;
+}
+
+.read .readtext .btn {
+    background: #DC7000;
+    padding: 14px 25px;
+    margin-left: 80px;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 40px;
+    outline: none !important;
+    border: none !important;
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+
+.read .readtext .btn:hover {
+    background: #b85e00;  
+    cursor: pointer; 
+}
+
+.read .readtext .btn a {
+    color: #fff;
+    text-decoration: none; 
+}
+
+.starik h3 {
+    font-size: 30px;
+    text-align: center;
+    width: 450px;
+    margin-left: 560px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    position: relative;
+    top: 40px;
+}
+
+.starik p {
+    font-size: 14px;
+    width: 500px;
+    text-align: center;
+    margin-left: 540px;
+    position: relative;
+    top: 30px;
+}
+
+.workstar {
+    background: #1C140F;
+    width: 100%;
+}
+
+.reviews {
+    display: flex;
+    gap: 20px;
+    margin-top: 200px;
+    background-color: transparent; /* Полностью прозрачный фон */
+    border: 2px solid #ffffff;    /* Белая обводка */
+    color: white;
+    padding: 70px 50px 50px 260px;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 100px;
+    top: -100px;
+}
+
+.reviewsimg {
+    height: 50px;
+    position: relative;
+    right: 230px;
+    top: -30px;
+}
+
+.reviewstext h4 {
+    width: 200px;
+    position: relative;
+    right: 300px;
+    top: -30px;
+}
+
+.reviewstext p {
+    width: 200px;
+    position: relative;
+    top: -28px;
+    right: 300px;
+}
+
+.reviewstext .teri {
+    width: 350px;
+    margin-right: -30px;
+    position: relative;
+    right: 370px;
+    top: -18px;
+}
+
+.starso {
+    height: 17px;
+    position: relative;
+    top: -15.5px;
+    left: 15px;
+}
+
+.cent {
+    position: relative;
+    left: -50px;
+    top: -18px;
+}
+
+/*второй блок отзыва*/
+.review1 {
+    display: flex;
+    gap: 20px;
+    margin-top: 200px;
+    background-color: transparent; 
+    border: 2px solid #ffffff;    
+    color: white;
+    padding: 70px 50px 50px 260px;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: -260px;
+    top: -275px;
+}
+
+.starso2 {
+    height: 17px;
+    position: relative;
+    top: -15.5px;
+    left: 15px;
+}
+
+.cent2 {
+    position: relative;
+    left: -40px;
+    top: -18px;
+}
+
+/*3 блок отзывов*/
+.review2 {
+    display: flex;
+    gap: 20px;
+    margin-top: 200px;
+    background-color: transparent; 
+    border: 2px solid #ffffff;   
+    color: white;
+    padding: 70px 50px 50px 260px;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: -190px;
+    top: -275px;
+}
+
+.starso3 {
+    height: 17px;
+    position: relative;
+    top: -15.5px;
+    left: 15px;
+}
+
+.cent3 {
+    position: relative;
+    left: -40px;
+    top: -18px;
+}
+
+.circle-arrow-button {
+  width: 60px;          
+  height: 60px;         
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #DC7000;
+  color: #DC7000;
+  font-size: 30px;
+  font-weight: normal;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  top: -40px;
+  right: -1350px;
+}
+
+.circle-arrow-button:hover {
+  background-color: #DC7000;
+  color: white;
+}
+
+.circle-arrow-button2 {
+  width: 60px;          
+  height: 60px;         
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #DC7000;
+  color: #DC7000;
+  font-size: 30px;
+  font-weight: normal;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  top: -40px;
+  right: -1200px;
+}
+
+.circle-arrow-button2:hover {
+  background-color: #DC7000;
+  color: white;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}   
